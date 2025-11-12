@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --accent-color: #800000;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: calc(90% + 0.2vw);
+  width: 80%;
+  max-width: 1024px;
+  margin: auto;
+  border: 2px solid var(--accent-color);
+  line-height: 1.5;
+}
+
+h1, h2, h3, p, ul {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+ul {
+  margin-left: 2em;
+}
+
+h2 {
+  color: var(--accent-color);
+}
+
+a:hover,
+a:focus {
+  font-style: italic;
+  color: var(--accent-color);
+}
+
+header {
+  border-bottom: 2px solid var(--accent-color);
+  background: linear-gradient(
+    30deg,
+    #f6bb73 0%,
+    white 30%,
+    white 65%,
+    #f6bb73 100%
+  );
+  line-height: 1.2;
+  overflow: auto;
+}
+
+header img {
+  float: left;
+  margin: 0.75em 1em;
+  width: 100%;
+  min-width: 40px;
+  max-width: 80px;
+}
+
+header h2 {
+  font-size: 175%;
+  text-indent: 30px;
+}
+
+header h3 {
+  font-size: 130%;
+  font-style: italic;
+  text-indent: 30px;
+  padding-bottom: 1em;
+}
+
+main {
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+}
+
+/* Aside 25% */
+aside {
+  flex-basis: 25%;
+}
+
+/* Section 75% */
+section {
+  flex-basis: 75%;
+}
+
+section img {
+  float: right;
+  margin-left: 1em;
+  width: 100%;
+  min-width: 100px;
+  max-width: 250px;
+}
+
+.featured {
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding: 0.75em 0;
+  overflow: auto;
+}
+
+aside img {
+  display: block;
+  margin-bottom: 1em;
+  border: 4px double var(--accent-color);
+  border-radius: 8px;
+  width: 100%;
+  min-width: 40px;
+  max-width: 75px;
+}
+
+.featured h2 {
+  color: black;
+}
+.featured h3 {
+  color: var(--accent-color);
+  font-style: italic;
+}
+.featured a {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+blockquote {
+  font-style: italic;
+  padding-left: 1em;
+}
+
+footer {
+  background-color: var(--accent-color);
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.large {
+  font-size: 125%;
+}
+
+@media (max-width: 700px) {
+  main {
+    flex-direction: column;
+  }
+
+  aside, section {
+    flex-basis: 100%;
+  }
+
+  section img, aside img {
+    float: none;
+    display: block;
+    margin: 0.5em auto;
+  }
+}
